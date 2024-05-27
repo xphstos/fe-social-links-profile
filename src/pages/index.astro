@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Frontend Mentor | Social links profile">
+  <main>
+    <article>
+      <img src="/avatar-jessica.jpeg" alt="Jessica's Randall avatar" />
+      <h1>Jessica Randall</h1>
+      <address>London, United Kingdom</address>
+      <blockquote>
+        <p>"Front-end developer and avid reader."</p>
+      </blockquote>
+      <ul role="list">
+        <li>
+          <a href="#0">GitHub</a>
+        </li>
+        <li>
+          <a href="#0">Frontend Mentor</a>
+        </li>
+        <li>
+          <a href="#0">LinkedIn</a>
+        </li>
+        <li>
+          <a href="#0">X (Formerly Twitter)</a>
+        </li>
+        <li>
+          <a href="#0">Instagram</a>
+        </li>
+      </ul>
+    </article>
+  </main>
+</Layout>
+
+<style scoped>
+  main {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding-block: fluidRem(1.5, 2.5);
+    padding-inline: container(1.5, 384);
+    scrollbar-gutter: stable both-edges;
+  }
+
+  article {
+    background: var(--dark-grey);
+    padding: fluidRem(1.5, 2.5);
+    border-radius: 1rem;
+    text-align: center;
+    width: min(24rem, 100%);
+  }
+
+  img {
+    display: inline;
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 50vmax;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  address {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--green);
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  blockquote p {
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li:not(:first-child) {
+    margin-block-start: 1rem;
+  }
+  a {
+    display: block;
+    background-color: var(--grey);
+    color: inherit;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    user-select: none;
+    transition:
+      color 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
+  }
+
+  a:focus {
+    outline: transparent;
+  }
+
+  a:focus-visible,
+  a:hover {
+    background: var(--green);
+    color: var(--dark-grey);
+  }
+</style>
